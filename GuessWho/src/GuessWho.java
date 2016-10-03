@@ -36,7 +36,7 @@ public class GuessWho {
 				"-l/Users/xiaoduo/Desktop/sampleGameFiles/game1.logs",
 				"/Users/xiaoduo/Desktop/sampleGameFiles/game1.config",
 				"/Users/xiaoduo/Desktop/sampleGameFiles/game1.chosen",
-				"random", "random" };
+				"random", "binary" };
 		// OptionSet options = parser.parse(args);
 		OptionSet options = parser.parse(dumArgs);
 
