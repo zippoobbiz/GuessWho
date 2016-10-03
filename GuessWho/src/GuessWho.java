@@ -179,7 +179,7 @@ public class GuessWho {
 				// player1Finished should be true;
 				// otherwise be false.
 				player1Finished = player1.receiveAnswer(currGuess, currAnswer);
-
+				
 				// player 2's turn
 				currGuess = player2.guess();
 				log.add("Player 2 guessing " + currGuess);
