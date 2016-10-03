@@ -1,7 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,44 +29,9 @@ public class Attribute {
 			for (String v : valuesPersonMap.get(s)) {
 				if (remainingCandidates.contains(v)) {
 					remainingPairs.add(new Pair(attributeName, s));
-					break;
 				}
 			}
 		}
-		return remainingPairs;
-	}
-
-	public List<Pair> remainingPairWeighted(List<String> remainingCandidates) {
-		Map<String, ArrayList<String>> remainingValuesPersonMap = new HashMap<>();
-		List<Pair> remainingPairs = new ArrayList<Pair>();
-		for (String s : valuesPersonMap.keySet()) {
-			for (String v : valuesPersonMap.get(s)) {
-				if (remainingCandidates.contains(v)) {
-					remainingPairs.add(new Pair(attributeName, s));
-					break;
-				}
-			}
-		}
-		for (Pair p : remainingPairs) {
-			int count = 0;
-			for (String s : valuesPersonMap.get(p.getValue())) {
-				if (remainingCandidates.contains(s)) {
-//					remainingCandidates.forEach(a -> System.out.print(a));
-//					System.out.println("===="+s);
-					count++;
-				}
-			}
-//			System.out.println(count + "----" + remainingCandidates.size());
-			p.setChanceToWin((double)count / remainingCandidates.size());
-		}
-
-		// Collections.sort(remainingPairs, new Comparator<Pair>() {
-		// @Override
-		// public int compare(Pair o1, Pair o2) {
-		// return 0;
-		// }
-		// });
-		
 		return remainingPairs;
 	}
 

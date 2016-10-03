@@ -33,7 +33,7 @@ public class RandomGuessPlayer implements Player {
 
 	public RandomGuessPlayer(String gameFilename, String chosenName) throws IOException {
 		this.chosenName = chosenName;
-//		System.out.println("choose " + chosenName);
+		System.out.println("choose " + chosenName);
 		attributes = new ArrayList<Attribute>();
 		reminingCandidates = new ArrayList<String>();
 		String content = FileHelper.readFile(gameFilename, Charset.defaultCharset());
@@ -42,7 +42,7 @@ public class RandomGuessPlayer implements Player {
 		for (int i = 1; i < blocks.length; i++) {
 			addPeople(blocks[i].split("\n"));
 		}
-//		System.out.println(blocks.length);
+		System.out.println(blocks.length);
 	} // end of RandomGuessPlayer()
 
 	public void setAttributes(String[] lines) {
