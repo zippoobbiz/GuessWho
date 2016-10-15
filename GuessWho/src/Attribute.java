@@ -26,7 +26,7 @@ public class Attribute {
 		this.attributeName = attributeName;
 		valuesPersonMap = new HashMap<String, ArrayList<String>>();
 		for (String s : values) {
-			valuesPersonMap.put(s, new ArrayList());
+			valuesPersonMap.put(s, new ArrayList<String>());
 		}
 	}
 
